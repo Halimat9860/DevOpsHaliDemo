@@ -17,13 +17,7 @@ pipeline{
                   sh 'mvn compile'
 	      }
           }
-          stage('CodeReview'){
-              steps{
-		    
-		  echo 'codeReview'
-                  sh 'mvn pmd:pmd'
-              }
-          }
+          
            stage('UnitTest'){
               steps{
 	         echo 'Testing'
