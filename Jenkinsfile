@@ -8,7 +8,7 @@ pipeline{
            stage('Checkout'){
               steps{
 		 echo 'cloning..'
-                 git 'https://github.com/RayItern/DevOpsCodeDemo-1.git'
+                 git 'https://github.com/Halimat9860/DevOpsHaliDemo.git'
               }
           }
           stage('Compile'){
