@@ -8,7 +8,7 @@ pipeline{
            stage('Checkout'){
               steps{
 		 echo 'cloning..'
-                 git 'https://github.com/Halimat9860/DevOpsHaliDemo.git'
+                  git 'https://github.com/Halimat9860/DevOpsHaliDemo.git'
               }
           }
           stage('Compile'){
@@ -16,6 +16,13 @@ pipeline{
                   echo 'compiling..'
                   sh 'mvn compile'
 	      }
+          }
+          stage('CodeReview'){
+              steps{
+		    
+		  echo 'codeReview'
+                  sh 'mvn pmd:pmd'
+              }
           }
            stage('UnitTest'){
               steps{
